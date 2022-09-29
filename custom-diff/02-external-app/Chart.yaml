@@ -2,3 +2,8 @@ apiVersion: v2
 description: A problematic Helm chart for Kubernetes
 name: external-app
 version: 0.1.0
+   ignoreDifferences:
+  - group: apps
+    kind: Deployment
+    jsonPointers:
+    - /spec/replicas
