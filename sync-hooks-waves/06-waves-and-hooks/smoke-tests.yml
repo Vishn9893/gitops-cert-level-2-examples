@@ -5,8 +5,8 @@ metadata:
   generateName: smoke-tests-
   labels:
     codefresh.io/cert: smoke-job  
-    annotations:
-      argocd.argoproj.io/hook: PostSync
+    #annotations:
+      #argocd.argoproj.io/hook: PostSync
 spec:
   template:
     spec:
@@ -15,6 +15,6 @@ spec:
         image: alpine
         command:
           - "sleep"
-          - "5"
+          - "10"
       restartPolicy: Never
   backoffLimit: 2    
